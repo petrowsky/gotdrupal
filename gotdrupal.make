@@ -3,6 +3,7 @@
 
 ; Core
 
+api = 2
 core = "6.x"
 
 ; Contrib
@@ -27,6 +28,8 @@ projects[filter_perms][subdir] = "contrib"
 projects[flowplayer][subdir] = "contrib"
 projects[globalredirect][subdir] = "contrib"
 projects[googleanalytics][subdir] = "contrib"
+projects[googleanalytics][version] = "6.x-3.3"
+
 projects[google_cse][subdir] = "contrib"
 projects[imagefield][subdir] = "contrib"
 projects[jquery_update][subdir] = "contrib"
@@ -39,7 +42,6 @@ projects[mollom][subdir] = "contrib"
 projects[nodewords][subdir] = "contrib"
 projects[pathauto][subdir] = "contrib"
 projects[path_redirect][subdir] = "contrib"
-projects[phpmailer][subdir] = "contrib"
 projects[robotstxt][subdir] = "contrib"
 projects[rules][subdir] = "contrib"
 projects[semanticviews][subdir] = "contrib"
@@ -71,8 +73,9 @@ projects[rss_enclosure][download][url] = "file:///data/disk/o1/static/rss_enclos
 
 ; Themes
 ; ------------------
-projects[tao][type] = theme
 projects[tao][subdir] = themes
+projects[tao][version] = "6.x-3.2"
+
 
 ; Rubik is included by Omega boxes
 ;projects[rubik][type] = theme
