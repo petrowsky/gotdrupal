@@ -4,56 +4,54 @@
 ; Core
 
 api = 2
-core = "6.x"
+core = 6.x
 
 ; Contrib
 ; ------------------
-;projects[jquery_ui][subdir] = "contrib"
-projects[admin_menu][subdir] = "contrib"
-projects[adsense][subdir] = "contrib"
-projects[advanced_help][subdir] = "contrib"
-projects[backup_migrate][subdir] = "contrib"
-projects[better_formats][subdir] = "contrib"
-projects[browscap][subdir] = "contrib"
-projects[cck][subdir] = "contrib"
-projects[codefilter][subdir] = "contrib"
-projects[comment_notify][subdir] = "contrib"
-projects[content_access][subdir] = "contrib"
-projects[ctools][subdir] = "contrib"
-projects[date][subdir] = "contrib"
-projects[emfield][subdir] = "contrib"
-projects[fasttoggle][subdir] = "contrib"
-projects[filefield][subdir] = "contrib"
-projects[filter_perms][subdir] = "contrib"
-projects[flowplayer][subdir] = "contrib"
-projects[globalredirect][subdir] = "contrib"
-projects[google_analytics][subdir] = "contrib"
-projects[google_cse][subdir] = "contrib"
-projects[imagefield][subdir] = "contrib"
-projects[jquery_update][subdir] = "contrib"
-projects[libraries][subdir] = "contrib"
-projects[logintoboggan][subdir] = "contrib"
-projects[markdown][subdir] = "contrib"
-projects[mimemail][subdir] = "contrib"
-projects[module_filter][subdir] = "contrib"
-projects[mollom][subdir] = "contrib"
-projects[nodewords][subdir] = "contrib"
-projects[pathauto][subdir] = "contrib"
-projects[path_redirect][subdir] = "contrib"
-projects[robotstxt][subdir] = "contrib"
-projects[rules][subdir] = "contrib"
-projects[semanticviews][subdir] = "contrib"
-projects[shorten][subdir] = "contrib"
-projects[shorturl][subdir] = "contrib"
-projects[token][subdir] = "contrib"
-projects[tweet][subdir] = "contrib"
-projects[typogrify][subdir] = "contrib"
-projects[uncaptchalous][subdir] = "contrib"
-projects[vertical_tabs][subdir] = "contrib"
-projects[views][subdir] = "contrib"
-projects[views_bulk_operations][subdir] = "contrib"
-projects[webform][subdir] = "contrib"
-projects[xmlsitemap][subdir] = "contrib"
+projects[admin_menu][version] = 1.6
+projects[adsense][version] = 1.3
+projects[advanced_help][version] = 1.2
+projects[better_formats][version] = 1.2
+projects[browscap][version] = 1.1
+projects[cck][version] = 2.8
+projects[codefilter][version] = 1.0
+projects[comment_notify][version] = 1.4
+projects[content_access][version] = 1.2
+projects[ctools][version] = 1.8
+projects[date][version] = 2.6
+projects[emfield][version] = 2.5
+projects[fasttoggle][version] = 1.4
+projects[filefield][version] = 3.10
+projects[filter_perms][version] = 1.1
+projects[flowplayer][version] = 1.0-beta1 
+projects[globalredirect][version] = 1.4
+projects[google_analytics][version] = 3.3
+projects[google_cse][version] = 1.2
+projects[imagefield][version] = 3.10
+projects[jquery_ui][version] = 1.5
+projects[jquery_update][version] = 2.0-alpha1
+projects[libraries][version] = 1.0
+projects[logintoboggan][version] = 1.10
+projects[markdown][version] = 1.2
+projects[mimemail][version] = 6.x-1.x-dev
+projects[module_filter][version] = 1.7
+projects[mollom][version] = 1.16
+projects[nodewords][version] = 1.11
+projects[pathauto][version] = 1.6
+projects[path_redirect][version] = 6.x-1.x-dev
+projects[rules][version] = 6.x-1.x-dev
+projects[semanticviews][version] = 6.x-1.x-dev
+projects[shorten][version] = 6.x-1.x-dev
+projects[shorturl][version] = 6.x-1.x-dev
+projects[token][version] = 1.18
+projects[tweet][version] = 4.3
+projects[typogrify][version] = 6.x-1.x-dev
+projects[uncaptchalous][version] = 1.0-beta4
+projects[vertical_tabs][version] = 1.0-rc2
+projects[views][version] = 2.11
+projects[views_bulk_operations][version] = 1.13
+projects[webform][version] = 2.10
+projects[xmlsitemap][version] = 2.0-rc1
 
 ; Custom
 ; ----------------------
@@ -64,10 +62,20 @@ projects[xmlsitemap][subdir] = "contrib"
 
 ; Libraries
 ; ------------------
-;libraries[jquery_ui][download][type] = "get"
-;libraries[jquery_ui][download][url] = "http://jquery-ui.googlecode.com/files/jquery-ui-1.7.3.zip"
-;libraries[jquery_ui][destination] = "modules/contrib/jquery_ui"
-;libraries[jquery_ui][directory_name] = "jquery.ui"
+libraries[jquery_ui][download][type] = get
+libraries[jquery_ui][download][url] = http://jquery-ui.googlecode.com/files/jquery-ui-1.7.3.zip
+libraries[jquery_ui][destination] = libraries
+libraries[jquery_ui][directory_name] = jquery.ui
+
+libraries[profiler][download][type] = get
+libraries[profiler][download][url] = http://ftp.drupal.org/files/projects/profiler-6.x-2.0-beta2.tar.gz
+libraries[profiler][destination] = libraries
+
+; http://drupal.org/node/906106
+libraries[profiler][patch][] = http://drupal.org/files/issues/profiler.906106-11.patch
+
+; http://drupal.org/node/1013430
+libraries[profiler][patch][] = http://drupal.org/files/issues/profiler-install-files.patch
 
 ; Themes
 ; ------------------
