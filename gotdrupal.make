@@ -43,6 +43,7 @@ projects[rules][version] = 6.x-1.x-dev
 projects[semanticviews][version] = 6.x-1.x-dev
 projects[shorten][version] = 6.x-1.x-dev
 projects[shorturl][version] = 6.x-1.x-dev
+projects[strongarm][version] = 2.1
 projects[token][version] = 1.18
 projects[tweet][version] = 4.3
 projects[typogrify][version] = 6.x-1.x-dev
