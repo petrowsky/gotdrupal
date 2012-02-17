@@ -1,0 +1,58 @@
+
+name = GotDrupal
+description = Default installation profile for GotDrupal.
+core = 6.x
+theme = amadou_gotdrupal
+
+; Core
+
+dependencies[] = menu
+dependencies[] = taxonomy
+
+; Contrib
+
+dependencies[] = admin_menu
+dependencies[] = adsense
+dependencies[] = advanced_help
+dependencies[] = better_formats
+dependencies[] = browscap
+dependencies[] = cck
+dependencies[] = codefilter
+dependencies[] = comment_notify
+dependencies[] = content_access
+dependencies[] = ctools
+dependencies[] = date
+dependencies[] = emfield
+dependencies[] = fasttoggle
+dependencies[] = filefield
+dependencies[] = filter_perms
+dependencies[] = flowplayer
+dependencies[] = globalredirect
+dependencies[] = google_analytics
+dependencies[] = google_cse
+dependencies[] = imagefield
+dependencies[] = jquery_ui
+dependencies[] = jquery_update
+dependencies[] = libraries
+dependencies[] = logintoboggan
+dependencies[] = markdown
+dependencies[] = mimemail
+dependencies[] = module_filter
+dependencies[] = mollom
+dependencies[] = nodewords
+dependencies[] = pathauto
+dependencies[] = path_redirect
+dependencies[] = rules
+dependencies[] = semanticviews
+dependencies[] = shorten
+dependencies[] = shorturl
+dependencies[] = strongarm
+dependencies[] = token
+dependencies[] = tweet
+dependencies[] = typogrify
+dependencies[] = uncaptchalous
+dependencies[] = vertical_tabs
+dependencies[] = views
+dependencies[] = views_bulk_operations
+dependencies[] = webform
+dependencies[] = xmlsitemap
