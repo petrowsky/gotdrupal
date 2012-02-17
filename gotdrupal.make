@@ -58,9 +58,9 @@ projects[xmlsitemap][subdir] = "contrib"
 ; Custom
 ; ----------------------
 ;rss_enclosure
-projects[rss_enclosure][subdir] = "custom"
-projects[rss_enclosure][download][type] = "file"
-projects[rss_enclosure][download][url] = "file:///data/disk/o1/static/rss_enclosure.zip"
+;projects[rss_enclosure][subdir] = "custom"
+;projects[rss_enclosure][download][type] = "file"
+;projects[rss_enclosure][download][url] = "file:///data/disk/o1/static/rss_enclosure.zip"
 
 ; Libraries
 ; ------------------
@@ -73,7 +73,6 @@ projects[rss_enclosure][download][url] = "file:///data/disk/o1/static/rss_enclos
 ; ------------------
 projects[tao][type] = theme
 projects[tao][subdir] = themes
-projects[tao][version] = "6.x-3.2"
 
 
 ; Rubik is included by Omega boxes
