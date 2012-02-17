@@ -1,5 +1,3 @@
-; $Id$
-
 ; This make file contains instructions, possible patches and third party
 ; libraries which will be loaded into your site platform hosted on Omega8.cc.
 
@@ -64,13 +62,6 @@ projects[rss_enclosure][subdir] = "custom"
 projects[rss_enclosure][download][type] = "file"
 projects[rss_enclosure][download][url] = "file:///data/disk/o1/static/rss_enclosure.zip"
 
-; Patches
-; ------------------
-; http://drupal.org/node/885412
-; projects[disqus][patch][] = "http://drupal.org/files/issues/disqus-views-relationships.patch"
-
-; http://drupal.org/node/624018
-; projects[wysiwyg][patch][] = "http://drupal.org/files/issues/wysiwyg-624018-with-ui-3.patch"
 
 ; Libraries
 ; ------------------
