@@ -62,7 +62,6 @@ projects[rss_enclosure][subdir] = "custom"
 projects[rss_enclosure][download][type] = "file"
 projects[rss_enclosure][download][url] = "file:///data/disk/o1/static/rss_enclosure.zip"
 
-
 ; Libraries
 ; ------------------
 ;libraries[jquery_ui][download][type] = "get"
@@ -80,10 +79,10 @@ projects[tao][subdir] = themes
 ;projects[rubik][subdir] = themes
 
 ;@todo move this to it's own repo? Going to change the theme
-projects[amadou_gotdrupal][type] = theme
-projects[amadou_gotdrupal][subdir] = themes
-projects[amadou_gotdrupal][download][type] = "file"
-projects[amadou_gotdrupal][download][url] = "file:///data/disk/o1/static/amadou_gotdrupal.zip"
+;projects[amadou_gotdrupal][type] = theme
+;projects[amadou_gotdrupal][subdir] = themes
+;projects[amadou_gotdrupal][download][type] = "file"
+;projects[amadou_gotdrupal][download][url] = "file:///data/disk/o1/static/amadou_gotdrupal.zip"
 
 ; Omega default modules
 ; ----------------------
