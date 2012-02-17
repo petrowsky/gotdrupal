@@ -1,0 +1,145 @@
+<?php
+// $Id: rss_enclosure.module 5 2009-02-13 08:20:01Z matt $
+
+/**
+ * @file
+ * Provide RSS Enclosure items to RSS feed using Content Fields.
+ *
+ * @author Matt Petrowsky, http://www.drupal.org/user/32196
+ */
+
+
+ /**
+  * Implementation of hook_nodeapi
+  *
+  * Adding an enclosure to 'rss item'.
+  */
+function rss_enclosure_nodeapi(&$node, $op) {
+  // @todo Add in [costly] feature to get bytecount from os when filefield meta is not used?
+  //<enclosure url="http://example.com/file.mp3" length="123456789" type="audio/mpeg" />
+  if ($op == 'rss item') {
+    // Remove any enclosures added by upload module - thanks to http://drupal.org/project/remove_upload_enclosures
+    if (module_exists('upload')) {
+      if (is_array($node->files)) {
+        unset($node->files); 
+      }
+    }
+    
+    $url_source = variable_get('rss_enclosure_url_source', '');
+    $url_base = variable_get('rss_enclosure_url_base', '');
+    $length = variable_get('rss_enclosure_length', '');
+    
+    // Bail out if the variable has never been set
+    if (empty($url_source)) {
+      return FALSE;
+    }
+    
+    // Get the URL and length from the content fields
+    $url = ltrim($node->{$url_source}[0]['value'], '/');
+    $base = rtrim($url_base, '/');
+    $length = $node->{$length}[0]['value'];
+
+    // Make sure url is valid and absolute
+    if (!valid_url($url, TRUE)) {
+      $url = $base . '/' . $url;
+    }
+    // Check url again as valid because the base path may have been added
+    if (check_url($url) && valid_url($url, TRUE) && is_numeric($length)) {
+      return array( array('key'   => 'enclosure',
+                          'attributes' => array(
+                            'url' => $url,
+                            'length' => (int)$length,
+                            'type' => file_get_mimetype(basename($url)),
+                            )
+                          )
+                  );
+    } else {
+      return FALSE;
+    }
+  }
+}
+
+/**
+ * Pulling content's fields list for menu selection in admin settings.
+ */
+function rss_enclosure_get_content_fields() {
+  $result = array();
+  $fields = content_fields();
+  foreach ($fields as $field) {
+    $result[$field['field_name']] = 'Content field: ' . $field['field_name'] . ' (' . $field['type'] . ')';
+  }
+  return $result;
+}
+
+/**
+ * Implementation of hook_menu().
+ */
+function rss_enclosure_menu() {
+  $items = array();
+  $items['admin/settings/rss_enclosure'] = array(
+    'title'             => 'RSS Enclosures',
+    'description'       => 'Configure settings for RSS Enclosures.',
+    'page callback'     => 'drupal_get_form',
+    'page arguments'    => array('rss_enclosure_admin_settings'),
+    'access callback'   => 'user_access',
+    'access arguments'  => array('administer site configuration'),
+    'type'              => MENU_NORMAL_ITEM,
+  );
+  // dpm(rss_enclosure_get_content_fields());
+  return $items;
+}
+
+/**
+ * Callback function for admin/settings/rss_enclosure. Display the settings form.
+ */
+function rss_enclosure_admin_settings() {
+  drupal_add_js(drupal_get_path('module', 'rss_enclosure') .'/rss_enclosure.js');
+  drupal_add_css(drupal_get_path('module', 'rss_enclosure') .'/rss_enclosure.css');
+  
+  $form = array();
+  $form['source_fields'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Enclosure source field'),
+    '#collapsible' => FALSE,
+    '#collapsed' => FALSE,
+  );
+  $options = array(t('None'));
+  if (module_exists('content')) {
+    $options = array_merge($options, rss_enclosure_get_content_fields());
+  }
+  // Get filefield's meta information here <<<<<<<<<<<<<<<<<<<<<<<<<
+  $form['source_fields']['rss_enclosure_url_source'] = array(
+    '#title' => t('File Source'),
+    '#type' => 'select',
+    '#options' => $options,
+    '#default_value' => variable_get('rss_enclosure_url_source', 'None'),
+    '#description' => t('Select the field which contains the url for the file enclosure.'),
+    '#attributes' => array('id' => 'rss-enclosure-url'),
+  );
+  // unless filefield meta (getID3) active and fieldtype is not filefield
+  $form['source_settings'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Enclosure settings'),
+    '#collapsible' => FALSE,
+    '#collapsed' => FALSE,
+    '#attributes' => array('class' => 'rss-enclosure-hide'),
+  );
+  $form['source_settings']['rss_enclosure_url_base'] = array(
+    '#title' => t('Base path'),
+    '#type' => 'textfield',
+    '#size' => 60,
+    '#maxlength' => 255,
+    '#default_value' => variable_get('rss_enclosure_url_base', ''),
+    '#description' => t('Enter the base path to the file enclosure if the selection above contains a relative path.<br />Leave this value empty if you\'re using absolute paths.'),
+  );
+  $form['source_settings']['rss_enclosure_length'] = array(
+    '#title' => t('Length value'),
+    '#type' => 'select',
+    '#options' => $options,
+    '#default_value' => variable_get('rss_enclosure_length', 'None'),
+    '#description' => t('Enclosures need a length value supplied. '),
+  );
+  // dpm($form);
+  
+  return system_settings_form($form);
+}

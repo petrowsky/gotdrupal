@@ -1,0 +1,26 @@
+<?php
+// $Id: rss_enclosure.install 5 2009-02-13 08:20:01Z matt $
+
+/**
+ * @file
+ * Install and uninstall functions for the rss_enclosure module
+ *
+ */
+ 
+/**
+ * Implementation of hook_install()
+ */
+function rss_enclosure_install() {
+  //Set module weight to -1 so it's run before upload module
+  db_query("UPDATE {system} SET weight = -1 WHERE name = 'rss_enclosure'");
+}
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function rss_enclosure_uninstall() {
+  // Remove variables.
+  variable_del('rss_enclosure_url_source');
+  variable_del('rss_enclosure_url_base');
+  variable_del('rss_enclosure_length');
+}

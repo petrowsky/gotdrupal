@@ -1,0 +1,5 @@
+; $Id: rss_enclosure.info 5 2009-02-13 08:20:01Z matt $
+name = RSS Enclosure
+description = Add an RSS enclosure tag to RSS output.
+core = 6.x
+dependencies[] = content
