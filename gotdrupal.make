@@ -96,77 +96,77 @@ projects[tao][subdir] = themes
 ; http://omega8.cc/modules-enabled-or-disabled-automatically-117#comment-574
 ; http://drupalcode.org/project/barracuda.git/blob/HEAD:/README.txt
 ;
-;projects[backup_migrate][subdir] = "contrib"
-;projects[backup_migrate][version] = "6.x-2.4"
-;
-;projects[blockcache_alter][subdir] = "contrib"
-;projects[blockcache_alter][version] = "6.x-1.x-dev"
-;
-;projects[boost][subdir] = "contrib"
-;projects[boost][version] = "6.x-1.x-dev"
-;
-;projects[cache][subdir] = "contrib"
-;projects[cache][version] = "6.x-1.x-dev"
-;
-;projects[config_perms][subdir] = "contrib"
-;projects[config_perms][version] = "6.x-2.x-dev"
-;
-;projects[css_emimage][subdir] = "contrib"
-;projects[css_emimage][version] = "6.x-2.x-dev"
-;
-;projects[dbtuner][subdir] = "contrib"
-;projects[dbtuner][version] = "6.x-1.x-dev"
-;
-;projects[expire][subdir] = "contrib"
-;projects[expire][version] = "6.x-1.x"
-;
-;projects[filefield_nginx_progress][subdir] = "contrib"
-;projects[filefield_nginx_progress][version] = "6.x-1.x-dev"
-;
-;projects[fpa][subdir] = "contrib"
-;projects[fpa][version] = "6.x-2.3"
-;
-;projects[httprl][subdir] = "contrib"
-;projects[httprl][version] = "6.x-1.4"
-;
-;projects[image][subdir] = "contrib"
-;projects[image][version] = "6.x-1.x-dev"
-;
-;projects[login_security][subdir] = "contrib"
-;projects[login_security][version] = "6.x-1.x-dev"
-;
-;projects[private_upload][subdir] = "contrib"
-;projects[private_upload][version] = "6.x-1.x-dev"
-;
-;projects[purge][subdir] = "contrib"
-;projects[purge][version] = "6.x-1.x"
-;
-;projects[readonlymode][subdir] = "contrib"
-;projects[readonlymode][version] = "6.x-1.x-dev"
-;
-;projects[robotstxt][subdir] = "contrib"
-;projects[robotstxt][version] = "6.x-1.x-dev"
-;
-;projects[seckit][subdir] = "contrib"
-;projects[seckit][version] = "6.x-1.3"
-;
-;projects[securesite][subdir] = "contrib"
-;projects[securesite][version] = "6.x-2.4"
-;
-;projects[site_verify][subdir] = "contrib"
-;projects[site_verify][version] = "6.x-1.0"
-;
-;projects[taxonomy_edge][subdir] = "contrib"
-;projects[taxonomy_edge][version] = "6.x-1.3"
-;
-;projects[textile][subdir] = "contrib"
-;projects[textile][version] = "6.x-2.4"
-;
-;projects[variable_clean][subdir] = "contrib"
-;projects[variable_clean][version] = "6.x-1.x-dev"
-;
-;projects[views_content_cache][subdir] = "contrib"
-;projects[views_content_cache][version] = "6.x-2.x-dev"
-;
-;projects[views404][subdir] = "contrib"
-;projects[views404][version] = "6.x-1.x-dev"
+; projects[backup_migrate][subdir] = "contrib"
+; projects[backup_migrate][version] = "6.x-2.4"
+; 
+; projects[blockcache_alter][subdir] = "contrib"
+; projects[blockcache_alter][version] = "6.x-1.x-dev"
+; 
+; projects[boost][subdir] = "contrib"
+; projects[boost][version] = "6.x-1.x-dev"
+; 
+; projects[cache][subdir] = "contrib"
+; projects[cache][version] = "6.x-1.x-dev"
+; 
+; projects[config_perms][subdir] = "contrib"
+; projects[config_perms][version] = "6.x-2.x-dev"
+; 
+; projects[css_emimage][subdir] = "contrib"
+; projects[css_emimage][version] = "6.x-2.x-dev"
+; 
+; projects[dbtuner][subdir] = "contrib"
+; projects[dbtuner][version] = "6.x-1.x-dev"
+; 
+; projects[expire][subdir] = "contrib"
+; projects[expire][version] = "6.x-1.x"
+; 
+; projects[filefield_nginx_progress][subdir] = "contrib"
+; projects[filefield_nginx_progress][version] = "6.x-1.x-dev"
+; 
+; projects[fpa][subdir] = "contrib"
+; projects[fpa][version] = "6.x-2.3"
+; 
+; projects[httprl][subdir] = "contrib"
+; projects[httprl][version] = "6.x-1.4"
+; 
+; projects[image][subdir] = "contrib"
+; projects[image][version] = "6.x-1.x-dev"
+; 
+; projects[login_security][subdir] = "contrib"
+; projects[login_security][version] = "6.x-1.x-dev"
+; 
+; projects[private_upload][subdir] = "contrib"
+; projects[private_upload][version] = "6.x-1.x-dev"
+; 
+; projects[purge][subdir] = "contrib"
+; projects[purge][version] = "6.x-1.x"
+; 
+; projects[readonlymode][subdir] = "contrib"
+; projects[readonlymode][version] = "6.x-1.x-dev"
+; 
+; projects[robotstxt][subdir] = "contrib"
+; projects[robotstxt][version] = "6.x-1.x-dev"
+; 
+; projects[seckit][subdir] = "contrib"
+; projects[seckit][version] = "6.x-1.3"
+; 
+; projects[securesite][subdir] = "contrib"
+; projects[securesite][version] = "6.x-2.4"
+; 
+; projects[site_verify][subdir] = "contrib"
+; projects[site_verify][version] = "6.x-1.0"
+; 
+; projects[taxonomy_edge][subdir] = "contrib"
+; projects[taxonomy_edge][version] = "6.x-1.3"
+; 
+; projects[textile][subdir] = "contrib"
+; projects[textile][version] = "6.x-2.4"
+; 
+; projects[variable_clean][subdir] = "contrib"
+; projects[variable_clean][version] = "6.x-1.x-dev"
+; 
+; projects[views_content_cache][subdir] = "contrib"
+; projects[views_content_cache][version] = "6.x-2.x-dev"
+; 
+; projects[views404][subdir] = "contrib"
+; projects[views404][version] = "6.x-1.x-dev"
