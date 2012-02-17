@@ -71,6 +71,7 @@ projects[rss_enclosure][download][url] = "file:///data/disk/o1/static/rss_enclos
 
 ; Themes
 ; ------------------
+projects[tao][type] = theme
 projects[tao][subdir] = themes
 projects[tao][version] = "6.x-3.2"
 
