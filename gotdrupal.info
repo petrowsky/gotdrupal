@@ -1,5 +1,6 @@
 
 name = GotDrupal
+old_short_name = default
 description = Default installation profile for GotDrupal.
 core = 6.x
 theme = amadou_gotdrupal
