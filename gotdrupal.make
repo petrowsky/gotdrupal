@@ -8,7 +8,7 @@ core = 6.x
 
 ; Contrib
 ; ------------------
-projects[admin_menu][version] = 1.6
+projects[admin_menu][version] = "6.x-3.x-dev"
 projects[adsense][version] = 1.3
 projects[advanced_help][version] = 1.2
 projects[better_formats][version] = 1.2
