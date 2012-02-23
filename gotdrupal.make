@@ -82,8 +82,8 @@ libraries[profiler][patch][] = http://drupal.org/files/issues/profiler-install-f
 ; Themes
 ; ------------------
 projects[tao][type] = theme
-projects[tao][subdir] = themes
-
+;projects[tao][subdir] = themes
+projects[tao][version] = 3.2
 
 ; Rubik is included by Omega boxes
 ;projects[rubik][type] = theme
