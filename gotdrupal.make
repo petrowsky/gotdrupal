@@ -9,8 +9,8 @@ core = 6.x
 ; Contrib
 ; ------------------
 projects[admin_menu][download][type] = git
-projects[admin_menu][download][url] = "http://git.drupal.org/project/admin_menu.git"
-projects[admin_menu][download][branch] = 6.x-3.x-dev
+projects[admin_menu][download][url] = http://git.drupal.org/project/admin_menu.git
+projects[admin_menu][download][branch] = 6.x-3.x
 
 projects[adsense][version] = 1.3
 projects[advagg][version] = 1.6
