@@ -8,7 +8,10 @@ core = 6.x
 
 ; Contrib
 ; ------------------
-projects[admin_menu][version] = "6.x-3.x-dev"
+projects[admin_menu][download][type] = git
+projects[admin_menu][download][url] = "http://git.drupal.org/project/admin_menu.git"
+projects[admin_menu][download][branch] = 6.x-3.x-dev
+
 projects[adsense][version] = 1.3
 projects[advagg][version] = 1.6
 projects[advanced_help][version] = 1.2
@@ -82,8 +85,7 @@ libraries[profiler][patch][] = http://drupal.org/files/issues/profiler-install-f
 ; Themes
 ; ------------------
 projects[tao][type] = theme
-;projects[tao][subdir] = themes
-projects[tao][version] = "6.x-3.3"
+projects[tao][version] = 3.2
 
 ; Rubik is included by Omega boxes
 ;projects[rubik][type] = theme
